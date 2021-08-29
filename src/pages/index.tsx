@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button } from '@/ui';
+import { ApplicationForm } from '@/layouts';
+import { mockApplicationForm } from '@/mockups';
 
 export default function IndexPage(): JSX.Element {
-  return <Button>Click me</Button>;
+  return <ApplicationForm flow={mockApplicationForm} />;
 }
