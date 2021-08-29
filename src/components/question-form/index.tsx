@@ -45,7 +45,7 @@ export function QuestionForm(props: Props): JSX.Element {
         return (
           <>
             <UIField
-              fieldId={fieldConfig.id.toString()}
+              fieldId={fieldConfig.id}
               label={fieldConfig.label}
               hint={fieldConfig.hint}
               error={meta.touched && meta.error}

@@ -28,7 +28,7 @@ export function StepComponent(props: Props): JSX.Element {
         {formConfig.hint && <Text color="#546A83">{formConfig.hint}</Text>}
       </Padding>
       <Formik initialValues={model} onSubmit={handleSubmit} validateOnBlur>
-        <Form id={formConfig.identifier}>
+        <Form id={formConfig.name}>
           <Padding y={16} x={40}>
             {formConfig.questions.map((field) => {
               return <QuestionForm fieldConfig={field} key={field.id} />;

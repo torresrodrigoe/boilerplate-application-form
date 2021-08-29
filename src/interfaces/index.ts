@@ -6,7 +6,7 @@ export interface StepConfig {
   questions: FieldConfig[];
 }
 export interface FieldConfig {
-  id: number;
+  id: string;
   order: number;
   name: string;
   label?: string;
@@ -14,7 +14,7 @@ export interface FieldConfig {
   hint?: string;
   isRequired?: boolean;
   dependsOn?: string;
-  dependsOnOption?: string;
+  dependsOnOption?: any;
   initialValue?: any;
   options?: any[];
 }
