@@ -31,8 +31,8 @@ export function QuestionForm(props: Props): JSX.Element {
     return values[fieldCfg.dependsOn] === fieldCfg.dependsOnOption;
   };
 
-  const changeInput = (e, name, field) => {
-    field.onChange({ target: { name: name, value: e } });
+  const changeInput = (e, name, field): void => {
+    field.onChange({ target: { name, value: e } });
   };
 
   const renderInput = (type: string, field, meta): ReactNode => {
@@ -45,7 +45,7 @@ export function QuestionForm(props: Props): JSX.Element {
         return (
           <>
             <UIField
-              id={fieldConfig.id}
+              fieldId={fieldConfig.id.toString()}
               label={fieldConfig.label}
               hint={fieldConfig.hint}
               error={meta.touched && meta.error}
